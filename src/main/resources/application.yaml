@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 123
+    url: jdbc:postgresql://localhost:5432/WebLab2
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled=true:
+logging:
+  level:
+    org:
+      springframework:
+       security: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type: TRACE
+security:
+  logins: just_user, superadmin
+  passwords: 1234, admin1234
+  roles: USER, ADMIN

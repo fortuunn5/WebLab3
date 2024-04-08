@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/projects/{id}/deleteProjectForm(id=${project.id})}" th:object="${project}" method="post">
+    <p>Id: <span th:text="${project.id}"></span></p>
+    <p>Name: <span th:text="${project.name}"></span></p>
+    <p>Description: <span th:text="${project.description}"></span></p>
+    <p>StartDate: <span th:text="${project.startDate}"></span></p>
+    <p>EndDate: <span th:text="${project.endDate}"></span></p>
+    <p>Tasks: <span th:text="${project.tasks}"></span></p>
+    <p><input type="submit" value="Delete" /></p>
+</form>
+</body>
+</html>
